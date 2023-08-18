@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	//function with no args
+	function test(){
+		document.write("Hello World!"+'</br>');
+	}
+	test();
+
+	//function with one args
+	function para(a){
+		document.write(a+'</br>');
+	}
+	para('sindhuja');
+	function para(a="hello"){
+		document.write(a+'</br>');
+	}
+	para();
+
+	var b=prompt("enter id");
+	function scan(rollno){
+		document.write(rollno+'</br>');
+	}
+	scan(b);
+
+    //function with 2 args
+    function add(a,b){
+    	document.write(a+b+'</br>');
+    }
+    add(11,22);//NAN=note a number
+
+    var y=function add(a,b){
+    	return a+b;
+    }
+    document.write(y(11,22)+'</br>');
+
+    var y=function(a,b){//anonymous function
+    	return a+b;
+    }
+    document.write(y(33,22)+'</br>');
+
+    var m=prompt('enter m value');
+    var y=function(a){
+    	return a*a*a;
+    }
+    document.write(y(m)+'</br>');
+
+    //arrow function with one args
+    add=()=>{//add=_=> can be used in case of single arg
+    	document.write('no args'+'</br>');
+    }
+    add(); 
+
+    //arrow function with one args
+    var n=prompt('enter n value');
+    add=(a)=>{//add=a=> can be used in case of single arg
+    	return a*a;
+    }
+    document.write(add(n)+'</br>');
+ 
+    setTimeout(function(){
+    	document.write("hello");
+    },4000)
+
+    setTimeout(test1,2000);
+    function test1(){
+    	document.write("hello");
+    }
+
+</script>
+</body>
+</html>
