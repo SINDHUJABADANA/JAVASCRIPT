@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<table border='1'>
+	<thead>
+		<tr>
+			<th>course name</th>
+			<th>course number</th>
+			<th>course fees</th>
+			<th>place</th>
+		</tr>
+	</thead>
+
+	<tbody id="a"></tbody>
+</table>
+
+<script type="text/javascript">
+	var aa=document.getElementById('a');
+	let data=[
+	{
+          'name':'html',
+          'number':'23423',
+          'fees':'235',
+          'place':'dwp',
+	},
+	{
+          'name':'css',
+          'number':'65687',
+          'fees':'567',
+          'place':'dwp',
+	},
+	{
+          'name':'javascript',
+          'number':'67845',
+          'fees':'7656',
+          'place':'dwp',
+	}
+	];
+	for(var i=0;i<data.length;i++){
+		var trb=document.createElement('tr');
+        for(var key in data[i]){
+        	var tdb=document.createElement('td');
+            tdb.textContent=data[i][key];
+            trd.appendChild(tdb);
+        }
+        aa.appendChild(tdb);
+    }
+</script>
+</body>
+</html>
